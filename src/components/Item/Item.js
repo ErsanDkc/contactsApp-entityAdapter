@@ -1,10 +1,9 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteContact } from '../../redux/contact/contactSlice'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 function Item({ items }) {
     const dispatch = useDispatch()
-    const navigate = useNavigate()
     const handleDelete = (id) => {
         if (window.confirm("Are you sure?"))
             dispatch(deleteContact(id))
