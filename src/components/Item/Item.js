@@ -1,23 +1,28 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteContact } from '../../redux/contact/contactSlice'
+import { NavLink, useNavigate } from 'react-router-dom'
 function Item({ items }) {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const handleDelete = (id) => {
-        dispatch(deleteContact(id))
+        if (window.confirm("Are you sure?"))
+            dispatch(deleteContact(id))
 
     }
+    
     return (
         <li>
-            <div>
+            <span className='name'>
+                {items.name}
+            </span>
 
-            {items.name}
-            </div>
-            <div style={{marginRight:10}}>
-                <span>{items.phone_number}</span>
-                <div className='deleteBtn' onClick={() => handleDelete(items.id)}>x</div>
-            </div>
-            
+            <span className='number' style={{ marginRight: 20 }}>{items.phone_number}</span>
+            <span style={{marginRight: -50}}>
+                <span className='edit' ><NavLink to={`/edit/${items.id}`}>e</NavLink></span>
+                <span className='delete' onClick={() => handleDelete(items.id)}>x</span>
+
+            </span>
 
 
         </li>
