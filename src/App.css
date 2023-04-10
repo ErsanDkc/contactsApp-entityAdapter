@@ -76,7 +76,7 @@ ul > li > * {
 .deleteAll {
   text-align: right;
   cursor: pointer;
-  margin-right: 68px;
+  margin-right: 100px;
   
 }
 .deleteAll > span {
