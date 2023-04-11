@@ -5,14 +5,24 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
+  color: rgb(12, 9, 48);
+}
+.form {
+  width: 60%;
 }
 
 input{
   border: transparent;
   width: 100%;
-  height: 24px;
-  border-bottom: 1.4px solid black;
+  height: 32px;
+  border-bottom: 1.4px solid  rgb(12, 9, 48);
   margin-bottom: 32px;
+  border-radius: 8px;
+  padding: 4px 4px 4px 8px;
+  font-size: 24px;
+}
+input:focus {
+  outline: none;
 }
 
 .container{

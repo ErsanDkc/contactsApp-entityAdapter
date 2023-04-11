@@ -13,10 +13,11 @@ function Form() {
         dispatch(addContact({id:nanoid(), name,phone_number:number}))
         setName("")
         setNumber("")
+        
     }
   return (
-    <form onSubmit={handleSubmit}>
-        <input placeholder='name' value={name} onChange={(e) => setName(e.target.value)} />
+    <form onSubmit={handleSubmit} className='form'>
+        <input placeholder='name' value={name} onChange={(e) => setName(e.target.value)} autoFocus />
         <input placeholder='phone number' type='number' value={number} onChange={(e) => setNumber(e.target.value)} />
         <button type='submit' className='btn'>Add</button>
 
