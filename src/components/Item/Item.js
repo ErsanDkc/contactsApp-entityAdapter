@@ -17,7 +17,7 @@ function Item({ items }) {
             </span>
 
             <span className='number' style={{ marginRight: 20 }}>{items.phone_number}</span>
-            <span style={{marginRight: "-120px"}}>
+            <span style={{marginRight: -105}}>
                 <span className='edit' ><NavLink to={`/edit/${items.id}`}>e</NavLink></span>
                 <span className='delete' onClick={() => handleDelete(items.id)}>x</span>
 
